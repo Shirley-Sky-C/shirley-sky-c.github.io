@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  padding: 40px 16px;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.food-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 6px solid white;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.food-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*.w3-card-4 {
+  border-radius: 12px;
+  padding: 40px 20px;
+}*/
+
+.w3-card-4 {
+  border-radius: 16px;
+  padding: 30px 20px;
+  max-width: 260px;
+  margin: auto;
+}
+
+h4 {
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.w3-row-padding > .w3-col {
+  margin-bottom: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MAIN CONTAINER -->
+<div class="w3-container">
+  <h2 class="w3-center">Our Menu</h2>
+</div>
+
+  <!-- HEADER -->
+  <header class="w3-container w3-center w3-padding-32">
+    <h1>My Cafe</h1>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="w3-display-container">
+    <img src="images/cafe.jpg" style="width:100%">
+    <div class="hero-text">Bon Appetit</div>
+  </div>
+
+  <!-- MENU TITLE -->
+   <div class="section">
+  <h2 class="w3-center">Our Menu</h2>
+</div>
+  
+
+  <!-- MENU ITEMS -->
+  <div class="w3-row-padding">
+
+    <!-- ITEM 1 -->
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card-4 w3-center w3-padding-24">
+        <img src="images/bread-basket.png" class="w3-circle food-img">
+        <h4>Bread Basket</h4>
+        <p>Fresh baked breads and muffins</p>
+        <p class="price">$5.50</p>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card-4 w3-center w3-padding-24">
+        <img src="images/belgian-waffles.jpg" class="w3-circle food-img">
+        <h4>Belgian Waffle</h4>
+        <p>Vanilla batter with malted flour</p>
+        <p class="price">$7.50</p>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card-4 w3-center w3-padding-24">
+        <img src="images/scrambled-eggs.jpg" class="w3-circle food-img">
+        <h4>Scrambled Eggs</h4>
+        <p>Eggs with pepper and garlic</p>
+        <p class="price">$7.50</p>
+      </div>
+    </div>
+
+    <!-- ITEM 4 -->
+    <div class="w3-col l3 m6 s12 w3-margin-bottom">
+      <div class="w3-card-4 w3-center w3-padding-24">
+        <img src="images/blueberry-pancakes.jpg" class="w3-circle food-img">
+        <h4>Blueberry Pancakes</h4>
+        <p>With syrup and berries</p>
+        <p class="price">$8.50</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

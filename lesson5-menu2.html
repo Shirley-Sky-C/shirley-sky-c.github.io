@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Cafe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- W3.CSS -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.hero img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6);
+}
+
+/* HERO TEXT */
+.hero-text {
+  position: absolute;
+  bottom: 120px;
+  left: 80px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 80px;
+  margin: 0;
+}
+
+.hero-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+/* MENU SECTION */
+.menu-section {
+  margin-top: 100vh;
+  background: #f5f5f5;
+  /*border-radius: 40px 40px 0 0;*/
+  padding: 80px 0 60px;
+  min-height: 0vh;
+}
+
+.menu-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  margin: 0 0 0px;
+  transform: translateY(40px); 
+  
+}
+
+/* CENTER CONTENT */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CAROUSEL */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+/* MAIN IMAGE */
+.main {
+  position: relative;
+  z-index: 2;
+}
+
+.main img {
+  width: 1100px;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+/* SIDE IMAGES */
+.side {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  opacity: 0.6;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LAYER EFFECT */
+.left {
+  transform: translateX(100px) scale(0.85);
+}
+
+.right {
+  transform: translateX(-100px) scale(0.85);
+}
+
+/* HOVER KEEP POSITION */
+.left:hover {
+  transform: translateX(160px) scale(1);
+  opacity: 1;
+}
+
+.right:hover {
+  transform: translateX(-160px) scale(1);
+  opacity: 1;
+}
+
+/* GLASS BOX */
+.glass {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  border-radius: 16px;
+  color: white;
+  width: 260px;
+}
+
+/* NAV BUTTON */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-btn { left: -80px; }
+.right-btn { right: -80px; }
+
+/* DOTS GLASS */
+.dots {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* =========================
+   TABLET (iPad)
+========================= */
+@media (max-width: 1024px) {
+
+  .main img {
+    width: 80vw;
+    height: 50vh;
+  }
+
+  .side {
+    width: 200px;
+    height: 200px;
+  }
+
+  .left {
+    transform: translateX(80px) scale(0.9);
+  }
+
+  .right {
+    transform: translateX(-80px) scale(0.9);
+  }
+
+  .glass {
+    width: 220px;
+    padding: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 60px;
+  }
+}
+
+
+/* =========================
+   MOBILE (phone)
+========================= */
+@media (max-width: 768px) {
+
+  /* HERO TEXT CENTER */
+  .hero-text {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
+  }
+
+  /* STACK LAYOUT */
+  .carousel {
+    flex-direction: column;
+  }
+
+  /* MAIN IMAGE FULL WIDTH */
+  .main img {
+    width: 90vw;
+    height: auto;
+  }
+
+  /* HIDE SIDE IMAGES */
+  .side {
+    display: none;
+  }
+
+  /* GLASS CENTERED */
+  .glass {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 20px;
+    width: 80%;
+  }
+
+  /* ARROWS LOWER */
+  .nav {
+    top: auto;
+    bottom: -70px;
+  }
+
+  /* MENU SPACING */
+  .menu-section {
+    padding: 120px 0 120px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero w3-display-container">
+  <img src="images/cafe.jpg">
+
+  <div class="hero-text">
+    <h1>My Cafe</h1>
+    <p>Bon Appetit</p>
+  </div>
+</div>
+
+<!-- MENU -->
+<div class="menu-section">
+
+  <h2 class="w3-center">Our Menu</h2>
+
+  <div class="container">
+
+    <div class="carousel">
+
+      <img class="side left" src="images/belgian-waffles.jpg">
+
+      <div class="main">
+        <img id="mainImg" src="images/bread-basket.png">
+
+        <div class="glass">
+          <h3 id="title">Bread Basket</h3>
+          <p id="desc">Fresh baked breads and muffins</p>
+          <p id="price">$5.50</p>
+        </div>
+      </div>
+
+      <img class="side right" src="images/scrambled-eggs.jpg">
+
+      <button class="nav left-btn" onclick="move(-1)">❮</button>
+      <button class="nav right-btn" onclick="move(1)">❯</button>
+
+    </div>
+
+    <!-- DOTS -->
+    <div class="w3-center">
+      <div class="dots">
+  <span class="dot" onclick="goTo(0)"></span>
+  <span class="dot" onclick="goTo(1)"></span>
+  <span class="dot" onclick="goTo(2)"></span>
+  <span class="dot" onclick="goTo(3)"></span>
+</div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const data = [
+  {
+    img: "images/bread-basket.png",
+    title: "Bread Basket",
+    desc: "Fresh baked breads and muffins",
+    price: "$5.50"
+  },
+  {
+    img: "images/belgian-waffles.jpg",
+    title: "Belgian Waffle",
+    desc: "Vanilla batter with malted flour",
+    price: "$7.50"
+  },
+  {
+    img: "images/scrambled-eggs.jpg",
+    title: "Scrambled Eggs",
+    desc: "Eggs with pepper and garlic",
+    price: "$7.50"
+  },
+  {
+    img: "images/blueberry-pancakes.jpg",
+    title: "Blueberry Pancakes",
+    desc: "With syrup and berries",
+    price: "$8.50"
+  }
+];
+
+let index = 0;
+
+function updateUI() {
+  // MAIN
+  document.getElementById("mainImg").src = data[index].img;
+  document.getElementById("title").innerText = data[index].title;
+  document.getElementById("desc").innerText = data[index].desc;
+  document.getElementById("price").innerText = data[index].price;
+
+  // SIDE
+  const leftIndex = (index - 1 + data.length) % data.length;
+  const rightIndex = (index + 1) % data.length;
+
+  document.querySelector(".left").src = data[leftIndex].img;
+  document.querySelector(".right").src = data[rightIndex].img;
+
+  // DOTS
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+function goTo(i) {
+  index = i;
+  updateUI();
+}
+function move(dir) {
+  index = (index + dir + data.length) % data.length;
+  updateUI();
+}
+
+updateUI();
+</script>
+
+</body>
+</html>
